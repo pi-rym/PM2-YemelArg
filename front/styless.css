@@ -1,0 +1,25 @@
+header {
+    background-color: #343a40;
+    color: hsl(0, 94%, 47%);
+    text-align: right;
+    text-align: center;
+}
+
+.nav-link {
+    color: aliceblue;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.movie-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: black;
+    color: aliceblue;
+}
