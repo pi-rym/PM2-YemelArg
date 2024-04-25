@@ -1,8 +1,12 @@
+const axios = require('axios')
 const renderFilms = require("./renderFilms");
 
 const getFilms = () => {
-  $.get(`https://students-api.up.railway.app/movies`, (data) =>
-    data.map(renderFilms)
-  ).fail(() => alert(`Error`));
+    axios.get(`https://students-api.up.railway.app/movies`)
+        .then((response) => {
+            response.data.map(renderFilms)
+        }).catch((error) => {
+            alert(error.message);
+        })
 };
 module.exports = getFilms;

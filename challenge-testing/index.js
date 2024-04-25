@@ -3,7 +3,7 @@ class carritoCompra {
         this.products = [];
     }
     agregarProducto(product) {
-        this.products.push.(product)
+        this.products.push(product)
     }
     calcularTotal() {
         let total = 0

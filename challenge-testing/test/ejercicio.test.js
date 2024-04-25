@@ -6,18 +6,21 @@ describe("clase carritoCompra", () => {
         carrito = new carritoCompra();
     });
 
-    const producto1 = { name: "producto1", price 10 };
-    const producto2 = { name: "producto2", price 20 };
-    it("carritoCompra debe ser una clase", () => {
+    const producto1 = { name: "producto1", price: 10 };
+    const producto2 = { name: "producto2", price: 20 };
+    it("CarritoCompra debe ser una clase", () => {
         expect(typeof carritoCompra).toBe("function");
         const carrito = new carritoCompra();
         expect(carrito instanceof carritoCompra).toBe(true)
     });
-    it("carritoCompra inicia la propiedad 'products' como un array vacio", () => {
+
+    it("CarritoCompra inicia la propiedad 'productos' como un Array vacio", () => {
         expect(Array.isArray(carrito.products)).toBe(true);
+        expect(carrito.products.length).toBe(0);
         expect(carrito.products).toHaveLenght(0);
+        expect(carrito.products).toEqual([]);
     });
-    it("agregaProducto agrega productos al carrito", () => {
+    it("agregarProducto agrega productos al carrito", () => {
         carrito.agregarProducto(producto1);
         expect(carrito.products).toHaveLenght(1);
         expect(carrito.products[0]).toEqual(producto1)
